@@ -11,6 +11,4 @@ export default async ({ Vue/* app, router, Vue, ... */ }) => {
     )
     Vue.component(componentName, componentConfig.default || componentConfig)
   })
-
-
 }
