@@ -1,18 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import routes from './routes'
+// Load routes modules dynamically.
+const requireContext = require.context('./routes', true, /.*\.js$/)
+
+const routes = requireContext
+  .keys()
+  .map(file => requireContext(file))
+  .reduce((routes, route) => {
+    routes = routes.concat(route.default || route)
+    return routes
+  }, [])
 
 Vue.use(VueRouter)
-
-/*
- * If not building with SSR mode, you can
- * directly export the Router instantiation;
- *
- * The function below can be async too; either use
- * async/await or return a Promise which resolves
- * with the Router instance.
- */
 
 export default function (/* { store, ssrContext } */) {
   const Router = new VueRouter({
