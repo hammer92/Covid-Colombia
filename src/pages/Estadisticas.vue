@@ -6,11 +6,11 @@
         <q-icon name="img:statics/img/bandera-colombia-2.gif" />
       </span>
     </div>
-    <div class="q-pa-md row items-start q-gutter-md">
-      <q-card class="my-card" style="    min-width: 320px;">
+    <div class="q-pa-md row items-start">
+      <q-card class="my-card col-6" >
         <q-card-section>
           <p style="font-weight: bold;">
-            Casos Confirmados en Colombia
+            Confirmados
           </p>
           <div class="row w-100">
             <div class="col-auto">
@@ -24,10 +24,10 @@
           </div>
         </q-card-section>
       </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
+      <q-card class="my-card col-6" >
         <q-card-section>
           <p style="font-weight: bold;">
-            Total recuperados
+            Recuperados
           </p>
           <div class="row w-100">
             <div class="col-auto">
