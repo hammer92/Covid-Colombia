@@ -1,5 +1,6 @@
 <template>
-    <div class="q-pa-md row items-start q-gutter-md">
+    <div class="full-width row wrap justify-center items-center content-center" style="height: 100vh;">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
        <q-card bordered class="my-card shadow-5">
           <q-card-section>
               <h5 class="text-center">Ingresar</h5>
@@ -46,12 +47,13 @@
               >
               </q-btn>
 
-              <p class="q-ma-sm text-center">
+              <p class="q-ma-sm text-right">
                 <router-link class="text-blue" to="forgotPassword">Forgot Password?</router-link>
               </p>
             </q-form>
           </q-card-section>
       </q-card>
+      </div>
     </div>
 </template>
 
