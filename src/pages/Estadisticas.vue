@@ -1,189 +1,199 @@
 <template>
-  <section>
-    <div class="row q-pa-md justify-center">
-      <span>Reporte Covid-19 Colombia</span>
-      <span>
-        <q-icon name="img:statics/img/bandera-colombia-2.gif" />
-      </span>
-    </div>
-    <div class="q-pa-md row items-start">
-      <q-card class="my-card col-6" >
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Confirmados
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
+    <section>
+        <div class="row q-pa-md justify-center">
+            <div class="col-md-6">
+                <div class="q-pa-md row items-start">
+                    <div class="col-12">
+                        <span>Reporte Covid-19 Colombia</span>
+                        <span>
+                    <q-icon name="img:statics/img/bandera-colombia-2.gif" />
+                  </span>
+                    </div>
+                </div>
+                <div class="q-pa-md row items-start">
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Confirmados
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(info,'total_cases',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Recuperados
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(info,'total_recovered',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Muertes totales
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(info,'total_deaths',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Total de casos nuevos
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(info,'total_new_cases_today',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Total de casos activos
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(info,'total_active_cases',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                </div>
             </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(info,'total_cases',0)}}
-              </p>
+            <div class="col-md-6">
+                <div class="q-pa-md row items-start">
+                    <div class="col-12">
+                        <span>Reporte de infección Covid-19 a nivel mundial</span>
+                    </div>
+                </div>
+                <div class="q-pa-md row items-start">
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Casos Confirmados
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(results,'total_cases',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Total recuperados
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(results,'total_recovered',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Muertes totales
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(results,'total_deaths',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Total de casos nuevos
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(results,'total_new_cases_today',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                    <q-card class="my-card col-12 q-my-xs">
+                        <q-card-section>
+                            <p style="font-weight: bold;">
+                                Total de casos activos
+                            </p>
+                            <div class="row w-100">
+                                <div class="col-auto">
+                                    <q-icon name="mdi-account-multiple " style="font-size: 40px;" />
+                                </div>
+                                <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;">
+                                    <p>
+                                        {{_.get(results,'total_active_cases',0)}}
+                                    </p>
+                                </div>
+                            </div>
+                        </q-card-section>
+                    </q-card>
+                </div>
             </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card col-6" >
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Recuperados
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(info,'total_recovered',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Muertes totales
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(info,'total_deaths',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Total de casos nuevos
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(info,'total_new_cases_today',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Total de casos activos
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(info,'total_active_cases',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-    </div>
-    <div class="row q-pa-md justify-center">
-      <span>Reporte de infección Covid-19 a nivel mundial</span>
-    </div>
-    <div class="q-pa-md row items-start q-gutter-md q-mb-lg">
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Casos Confirmados
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(results,'total_cases',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Total recuperados
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(results,'total_recovered',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Muertes totales
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(results,'total_deaths',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Total de casos nuevos
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(results,'total_new_cases_today',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card class="my-card" style="    min-width: 320px;">
-        <q-card-section>
-          <p style="font-weight: bold;">
-            Total de casos activos
-          </p>
-          <div class="row w-100">
-            <div class="col-auto">
-              <q-icon name="mdi-account-multiple " style="font-size: 40px;"/>
-            </div>
-            <div class="col-auto q-ml-auto q-pa-none text-red-10" style="font-size: 29px; font-weight: bold;" >
-              <p>
-                {{_.get(results,'total_active_cases',0)}}
-              </p>
-            </div>
-          </div>
-        </q-card-section>
-      </q-card>
-    </div>
-  </section>
+        </div>
+    </section>
 </template>
 
 <script>
