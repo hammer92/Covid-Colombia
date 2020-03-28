@@ -5,7 +5,7 @@
           <span>Reporte Covid-19 Colombia</span>
           <span><q-icon name="img:statics/img/bandera-colombia-2.gif" /></span>
         </div>
-        <q-card class="my-card bg-purple text-white col-12 col-sm-3 flex">
+        <q-card class="my-card bg-purple text-white col-12 col-sm-3">
           <q-icon class="q-my-sm" name="how_to_reg" style="font-size: 4rem;" />
           <q-card-section>
             <div class="text-subtitle1">Confirmados: {{ Confirmados }} </div>
