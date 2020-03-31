@@ -1,4 +1,5 @@
 import { upperFirst, camelCase } from 'lodash'
+import TrendChart from 'vue-trend-chart'
 // "async" is optional
 export default async ({ Vue/* app, router, Vue, ... */ }) => {
   const requireComponent = require.context(
@@ -11,4 +12,5 @@ export default async ({ Vue/* app, router, Vue, ... */ }) => {
     )
     Vue.component(componentName, componentConfig.default || componentConfig)
   })
+  Vue.use(TrendChart)
 }
