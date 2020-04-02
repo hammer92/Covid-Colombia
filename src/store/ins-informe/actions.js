@@ -2,7 +2,7 @@ import axios from 'axios'
 import { get, head } from 'lodash'
 export async function general ({ commit }/* context */) {
   try {
-    const { data } = await axios('https://infogram.com/api/live/flex/bc384047-e71c-47d9-b606-1eb6a29962e3/972157a6-eaf7-4cde-a65b-8579bd4b0af1?')
+    const { data } = await axios('https://infogram.com/api/live/flex/bc384047-e71c-47d9-b606-1eb6a29962e3/523ca417-2781-47f0-87e8-1ccc2d5c2839')
     commit('setGeneral', head(get(data, 'data', [])))
   } catch (e) {
     console.log(e)

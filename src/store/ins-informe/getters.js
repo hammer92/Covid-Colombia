@@ -4,11 +4,11 @@ import { get, last, map, filter, isNaN } from 'lodash'
  * @return {number}
  */
 export function Confirmados (state) {
-  return get(last(state.general), '3', 0)
+  return get(last(state.general), '2', 0)
 }
 
 export function GConfirmados (state) {
-  return filter(map(state.general, (m) => parseInt(m[3])), (f) => !isNaN(f))
+  return filter(map(state.general, (m) => parseInt(m[2])), (f) => !isNaN(f))
 }
 
 /**
@@ -26,11 +26,11 @@ export function GFallecidos (state) {
  * @return {number}
  */
 export function Recuperados (state) {
-  return get(last(state.general), '2', 0)
+  return get(last(state.general), '3', 0)
 }
 
 export function GRecuperados (state) {
-  return filter(map(state.general, (m) => parseInt(m[2])), (f) => !isNaN(f))
+  return filter(map(state.general, (m) => parseInt(m[3])), (f) => !isNaN(f))
 }
 
 /**
